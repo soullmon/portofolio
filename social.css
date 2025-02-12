@@ -1,0 +1,128 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+a, a:hover {
+  text-decoration: none;
+}
+
+.socialbtns, .socialbtns ul, .socialbtns li {
+  margin: 0;
+  padding: 5px;
+}
+
+.socialbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns .fa {
+    color: #000;
+  background-color: #fff;
+  width: 40px;
+    height: 40px;
+    padding-top: 12px;
+  border-radius: 20px;
+ 
+}
+
+.socialbtns .fa:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+#cooltoast-container {
+  z-index:3;
+  position: fixed;
+  top:  55%;
+  left: 47%;
+  width: auto;
+/*   font-family: 'Helvetica'; */
+}
+
+.cooltoast-toast {
+  position:relative;
+  padding: 8px 12px;
+  margin: 2px;
+  cursor: pointer;
+  animation-duration:.3s;
+  animation-name: cooltoast;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.cooltoast-fadeOut {
+  animation-name: cooltoastFadeOut;
+  animation-duration: .3s;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  animation-fill-mode: forwards;
+}
+
+#cooltoast-container p,
+#cooltoast-container h4 {
+  margin: 3px 0!important;
+}
+
+.cooltoast-title {
+  font-weight: 700;
+  font-size: 15px;
+  padding: 4px;
+  border-radius: 5px;
+  background-color:#fff;
+}
+
+.cooltoast-text {
+  font-size: 16px;
+  color: #fff;
+}
+
+.cooltoast-icon {
+  position: absolute;
+  top: 5px;
+  left: -40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 1.0);
+}
+
+.cooltoast-toast a, .cooltoast-toast a:hover {
+  color: #549EDB !important;
+  text-decoration: none !important;
+}
+
+/** toast types */
+.cooltoast-success {
+  border-bottom: 2px solid #51C625;
+}
+
+.cooltoast-warning {
+  border-bottom: 2px solid #DB9215;
+}
+
+.cooltoast-error {
+  border-bottom: 2px solid #DB2B1D;
+}
+
+.cooltoast-info {
+  border-bottom: 2px solid #27ABDB;
+}
+
+@keyframes cooltoast {
+  from {
+    transform: translate3d(0px, 0px, 50px);;
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes cooltoastFadeOut {
+  from {
+    transform: translate3d(0, 0px, 50px);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0px, 0px, 50px);
+    opacity: 0;
+  }
+}

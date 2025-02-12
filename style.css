@@ -1,0 +1,265 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  line-height: 1.5;
+  background: #041624;
+  background: linear-gradient(135deg, #000000 0%, #041624 100%) no-repeat center center;
+  background-size: 100% 100%;
+  height: 100%;
+}
+
+img {
+  display: flex;
+  max-width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vw;
+}
+
+.container {
+  position: relative;
+  max-width: 1280px;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 6px 24px #041624;
+}
+
+.hotspots {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.hotspots .hotspot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.hotspots .hotspot:nth-child(1) .trigger {
+  top: 6%;
+  left: 11%;
+}
+.hotspots .hotspot:nth-child(2) .trigger {
+  top: 24%;
+  left: 19%;
+}
+.hotspots .hotspot:nth-child(3) .trigger {
+  top: 42%;
+  left: 26%;
+}
+.hotspots .hotspot:nth-child(4) .trigger {
+  top: 61%;
+  left: 21%;
+}
+.hotspots .hotspot:nth-child(5) .trigger {
+  top:  45%;
+  left: 53%;
+}
+.hotspots .hotspot:nth-child(6) .trigger {
+  top:  27%;
+  left: 60%;
+}
+.hotspots .hotspot:nth-child(7) .trigger {
+  top:  25%;
+  left: 72%;
+}
+.hotspots .hotspot:nth-child(8) .trigger {
+  top:  31%;
+  left: 82%;
+}
+.hotspots .hotspot:nth-child(9) .trigger {
+  top:  77%;
+  left: 85%;
+}
+.hotspots .hotspot:nth-child(10) .trigger {
+  top:  46%;
+  left: 7%;
+  cursor: not-allowed;
+}
+/* part of boddy*/
+.hotspots .hotspot:nth-child(11) .trigger {
+  top:  65%;
+  left: 40%;
+  cursor: hand;
+}
+.hotspots .hotspot:nth-child(12) .trigger {
+  top:  55%;
+  left: 40%;
+  cursor: hand;
+
+}
+
+.hotspots .hotspot:nth-child(13) .trigger {
+  top:  88%;
+  left: 65%;
+  cursor: hand;
+
+}
+.hotspots .hotspot:nth-child(14) .trigger {
+  top:  78%;
+  left: 42%;
+  cursor: hand;
+}
+
+/*Part Of Commision and Proj */
+
+.hotspots .hotspot:nth-child(15) .trigger {
+  top: 55%;
+  left: 90%;
+  cursor: hand;
+}
+
+.hotspots .hotspot:nth-child(16) .trigger {
+  top: 84%;
+  left: 27%;
+  cursor: hand;
+}
+
+.hotspots .hotspot .trigger {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #a8a5a5;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  pointer-events: all;
+  box-shadow: 0 0 0 0 #ffffff;
+  transition: box-shadow 0.4s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.hotspots .hotspot .trigger:hover {
+  box-shadow: 0 0 0 8px rgba(0, 100, 225, 0.5);
+}
+.hotspots .hotspot .content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+.hotspots .hotspot .content::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.hotspots .hotspot .content figure {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  opacity: 0;
+  transform: translate(0, -10%);
+  transition: transform 0.6s, opacity 0.6s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.hotspots .hotspot .content figure::before {
+  content: "×";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #9ea8b0;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: rgba(0, 62, 124, 0.5);
+  font-size: 24px;
+  pointer-events: all;
+  cursor: pointer;
+}
+.hotspots .hotspot .content figure img {
+  width: 100%;
+}
+.hotspots .hotspot .content figure figcaption {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  pointer-events: none;
+}
+.hotspots .hotspot.reveal {
+  z-index: 1;
+  pointer-events: all;
+}
+.hotspots .hotspot.reveal .content {
+  opacity: 1;
+}
+.hotspots .hotspot.reveal .content::before {
+  opacity: 1;
+}
+.hotspots .hotspot.reveal .content figure {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-delay: 0.4s;
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.hotspots .hotspot.reveal .content figure figcaption {
+  pointer-events: all;
+}
+
+#fade {
+  opacity: 0;
+}
