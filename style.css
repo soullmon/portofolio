@@ -14,9 +14,10 @@ body {
   line-height: 1.5;
   background: #041624;
   background: linear-gradient(135deg, #000000 0%, #041624 100%) no-repeat center center;
-  background-size: 100% 100%;
-  height: 100%;
+  background-size:100%;
+  
 }
+
 
 img {
   display: flex;
@@ -31,12 +32,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1vw;
+  
 }
 
 .container {
   position: relative;
-  max-width: 1280px;
+  max-width:100%;
+  max-height: 100%;
   border-radius: 10px;
   overflow: hidden;
   z-index: 1;
@@ -50,6 +52,7 @@ main {
   bottom: 0;
   left: 0;
   overflow: hidden;
+
 }
 .hotspots .hotspot {
   position: absolute;
@@ -64,44 +67,46 @@ main {
   pointer-events: none;
 }
 .hotspots .hotspot:nth-child(1) .trigger {
-  top: 6%;
-  left: 11%;
+  top: 8%;
+  left: 14%;
 }
 .hotspots .hotspot:nth-child(2) .trigger {
-  top: 24%;
-  left: 19%;
+  top: 25%;
+  left: 22%;
 }
 .hotspots .hotspot:nth-child(3) .trigger {
-  top: 42%;
-  left: 26%;
+  top: 43%;
+  left: 28%;
 }
 .hotspots .hotspot:nth-child(4) .trigger {
   top: 61%;
-  left: 21%;
+  left: 23%;
 }
 .hotspots .hotspot:nth-child(5) .trigger {
   top:  45%;
   left: 53%;
 }
 .hotspots .hotspot:nth-child(6) .trigger {
-  top:  27%;
+  top:  28%;
   left: 60%;
 }
 .hotspots .hotspot:nth-child(7) .trigger {
-  top:  25%;
-  left: 72%;
+  top:  26%;
+  left: 70%;
 }
 .hotspots .hotspot:nth-child(8) .trigger {
   top:  31%;
-  left: 82%;
+  left: 79%;
 }
+
+/*email*/
 .hotspots .hotspot:nth-child(9) .trigger {
-  top:  77%;
-  left: 85%;
+  top:  76%;
+  left: 81%;
 }
 .hotspots .hotspot:nth-child(10) .trigger {
   top:  46%;
-  left: 7%;
+  left: 10%;
   cursor: not-allowed;
 }
 /* part of boddy*/
@@ -124,7 +129,7 @@ main {
 
 }
 .hotspots .hotspot:nth-child(14) .trigger {
-  top:  78%;
+  top:  76%;
   left: 42%;
   cursor: hand;
 }
@@ -132,14 +137,14 @@ main {
 /*Part Of Commision and Proj */
 
 .hotspots .hotspot:nth-child(15) .trigger {
-  top: 55%;
-  left: 90%;
+  top: 58%;
+  left: 89%;
   cursor: hand;
 }
 
 .hotspots .hotspot:nth-child(16) .trigger {
-  top: 84%;
-  left: 27%;
+  top: 82%;
+  left: 29%;
   cursor: hand;
 }
 
@@ -148,9 +153,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 24px;
-  height: 24px;
-  background: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0);
   color: #a8a5a5;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -175,7 +180,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
   pointer-events: none;
   transition: opacity 0.6s;
 }
@@ -258,6 +262,7 @@ main {
 }
 .hotspots .hotspot.reveal .content figure figcaption {
   pointer-events: all;
+  
 }
 
 #fade {
